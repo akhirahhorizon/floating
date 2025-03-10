@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Floating button */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc00; /* Golden color */
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        /* Three dots */
+        .dots {
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Options panel */
+        .options-panel {
+            display: none;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            z-index: 101;
+        }
+
+        .options-panel a {
+            display: block;
+            padding: 8px 16px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .options-panel a:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Show options panel on hover */
+        .floating-btn:hover + .options-panel {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating button -->
+    <button class="floating-btn">
+        <span class="dots">...</span>
+    </button>
+
+    <!-- Options Panel -->
+    <div class="options-panel">
+        <a href="tel:+971585861058" target="_blank">Call</a>
+        <a href="https://wa.me/971585861058" target="_blank">WhatsApp</a>
+    </div>
+</body>
+</html>
